@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Real-Estate/about-us</title>
+    <link rel="stylesheet" href="blog.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+    <header>
+        <div class="logo-container">
+            <a href="index.html"><h1>LOGO</h1></a>
+        </div>
+        <nav>
+            
+            <img src="./assest/close-nav.png" width="50" alt="close navigation menu" class="close-nav">
+            <div class="logo-container">
+                <a href="index.html"><h1>LOGO</h1></a>
+            </div>
+
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="index.html#about">About Us</a></li>
+                <li><a href="index.html#services">Services</a></li>
+                <li><a href="properties.html">Properties</a></li>
+                <li><a class="active-link" href="blog.html">Blogs</a></li>
+                <li><a href="contact.php">Contact</a></li>
+            </ul>
+        </nav>
+        <img src="./assest/open-nav.png" width="40px" alt="" class="open-nav headerDropAmination">
+    </header>
+    <main>
+        <section class="hero-section">
+            <div class="hero-container">
+                <h2>News & Update</h2>
+                <div class="hero-text-container">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo perspiciatis ad mollitia repellat sunt. Vel distinctio omnis molestias, incidunt magnam voluptatum sed, rem alias magni maiores expedita quod. Harum, assumenda.</p>
+                </div>
+            </div>
+        </section>
+        
+        <section class="blogs">
+            <div class="blog-header">
+                <h2>Blogs</h2>
+                <div class="search-blog">
+                    <input type="search" id="" placeholder="Search by title or date"><br>
+                    <button>Search</button>
+                </div>
+            </div>
+            <div class="blog-container">
+                <div class="blog-list">
+                    <!-- blogs will be displayed here -->
+                </div>
+                <div class="pagination-container">
+                     <button class="prevBtn">Prev</button>
+                     <p class="pagenumber"></p>
+                     <button class="nextBtn">Next</button>
+                </div>
+            </div>
+        </section>
+
+        <div class="blog-details-section">
+            <div class="blog-details-container">
+                <img src="/real-estate-website/assest/close.png" width="50" class="closeDetailBlogSection" onclick="closeDetailSection()" alt="">
+                <div class="blog-header-details">
+                    <h3>BLOG DETAILS</h3>
+                </div>
+
+                <div class="display-blog-details">
+                    <!-- blog-details wil be displayed here -->
+                </div>
+            </div>
+        </div>
+
+
+        <section class="newsletter-section">
+            <div class="newsletter-container">
+                <div>
+                    <h2>Stay Updated!</h2>
+                    <p>Subscribe to receive the latest property listings and news.</p>
+                </div>
+                <form action="/real-estate-website/admin-folder/pagesAndcontent.php" method="post">
+                    <input type="email" name="newsletterInput" placeholder="Enter your email">
+                    <br>
+                    <div class="button-container">
+                        <button name="newsletterBtn">Subscribe</button>
+                    </div>
+                </form>
+            </div>
+        </section>
+
+        
+    </main>
+    <footer>
+        <div class="footer-container">
+            <div class="footer-section first-footer-section">
+                <h1>LOGO</h1>
+                <p>Helping you find your <br> perfect property, every step <br>of the way</p>
+
+                <ul class="social-icon">
+                    <li><a href=""><i class="bx bxl-instagram"></i></a></li>
+                    <li><a href=""><i class="bx bxl-facebook"></i></a></li>
+                    <li><a href=""><i class="bx bxl-linkedin"></i></a></li>
+                    <li><a href=""><i class="bx bxl-twitter"></i></a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h2>Legal</h2>
+                <ul>
+                    <li><a href="">About Us</a></li>
+                    <li><a href="">Privacy Policy</a></li>
+                    <li><a href="">Terms & Conditions</a></li>
+                    <li><a href="">Agents Profile</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h2>Resources</h2>
+                <ul>
+                    <li><a href="">Buying Guide</a></li>
+                    <li><a href="">Selling Guide</a></li>
+                    <li><a href="">Renting Guilde</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h2>Quick Link</h2>
+                <ul>
+                    <li><a href="">Properties</a></li>
+                    <li><a href="">Blogs</a></li>
+                    <li><a href="">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h2>Get in touch</h2>
+                <ul>
+                    <li>Phone: <a href="tel:">+234 811 1344 1673</a></li>
+                    <li>Email: <a href="mailto:">comapny@alhuda.com</a></li>
+                    <li>Address: 121 Main road, <br>Osogbo, Osun State</li>
+                </ul>
+            </div>
+        </div>
+        <hr>
+        <p>&copy; <span class="copyright-year"></span> AL-HUDAH - All Right Reserved</p>
+    </footer>
+    <script>
+        
+        function openDetailSection(){
+            document.querySelector('.blog-details-section').classList.add('active');
+        }
+        function closeDetailSection(){
+            document.querySelector('.blog-details-section').classList.remove('active');
+        }
+
+        function openNav(){
+            const navContainer = document.querySelector("nav");
+            navContainer.classList.add("active");
+        }
+        function closeNav(){
+            const navContainer = document.querySelector("nav");
+            navContainer.classList.remove("active");
+        }
+        document.querySelector(".open-nav").addEventListener("click", openNav,);
+        document.querySelector(".close-nav").addEventListener("click", closeNav,);
+
+        const navLink = document.querySelectorAll(".nav-link");
+        navLink.forEach((navLinkElement) => {
+            navLinkElement.addEventListener("click", () => {
+                closeNav();
+            });
+        });
+    
+    
+        // ________________Code for displaying BLOGS_____________________
+       
+
+
+        let currentPage = 1;
+        const perPage = 10;
+
+        function fetchBlogs(page = 1) { 
+            fetch(`/real-estate-website/admin-folder/pagesAndcontent.php?fetch=blogs_paginated&page=${page}`)
+                .then(response => response.json())
+                .then(data => {
+                    // console.log('Data received:', data);
+                    const displayALLBlogs = document.querySelector('.blog-list');
+                    displayALLBlogs.innerHTML = '';
+
+                    data.blogs.forEach(blogs => {
+                        const sliceBlogDetails = blogs.blogdetail.slice(0, 50) + '....';
+
+                        const createBlogsForAll = document.createElement('div');
+                        createBlogsForAll.classList.add('createBlogsForAll');
+                        createBlogsForAll.innerHTML = `
+                            <div class="blog-item">
+                                <div class="blog-image-container">
+                                    <img src="/real-estate-website/BlogsImages/${blogs.blogimage}" width="100" alt="${blogs.blogheading}" />
+                                </div>
+                                <div class="blogs-body-container blog-content">
+                                    <h3 class="blog-heading">${blogs.blogheading}</h3>
+                                    <p class="blog-sliced-detail">${sliceBlogDetails} <button class="readmoreBtn">read more</button></p>
+                                </div>
+                                <hr>
+                                <div class="readmore-date">
+                                    <p class="blog-date">${blogs.blogdate}</p>
+                                    <button class="detailsBtn">Details</button>
+                                </div>
+                            </div>
+                        `;
+                        displayALLBlogs.appendChild(createBlogsForAll);
+
+                        createBlogsForAll.querySelector('.detailsBtn')
+                            .addEventListener('click', () => showBlogsDetails(blogs));
+                        createBlogsForAll.querySelector('.readmoreBtn')
+                            .addEventListener('click', () => showBlogsDetails(blogs));
+                    });     
+                    document.querySelector('.blogs').scrollIntoView({
+                        behavior: 'smooth'
+                    });
+
+                    renderPagination(data.total, data.page, data.perPage);
+                });
+        }
+
+       function renderPagination(total, currentPage, perPage) {
+        const totalPages = Math.ceil(total / perPage);
+
+        const prevBtn =   document.querySelector('.prevBtn');
+        prevBtn.disabled = currentPage === 1;
+        prevBtn.addEventListener('click',()=> fetchBlogs(currentPage - 1)) 
+
+        const nextBtn = document.querySelector('.nextBtn');
+        nextBtn.disabled = currentPage === totalPages;
+        nextBtn.addEventListener('click',()=> fetchBlogs(currentPage + 1)) 
+
+        const pageInfo = document.querySelector('.pagenumber');
+        pageInfo.textContent = `Page ${currentPage} of ${totalPages}`;
+    }
+
+
+        // Load blogs on page load
+        window.addEventListener('DOMContentLoaded', () => {
+            fetchBlogs(); // starts with page 1
+        });
+
+
+        function showBlogsDetails(blogs){
+        openDetailSection();
+        
+
+        const displayAllBlogs = document.querySelector('.display-blog-details');
+        displayAllBlogs.innerHTML = '';
+
+            const createAllBlogs = document.createElement('div');
+            createAllBlogs.classList.add('createAllBlogs');
+            createAllBlogs.innerHTML = `
+                <div class="detail-blog-item">
+                    <div class="detail-blog-image-container">
+                        <img src="/real-estate-website/BlogsImages/${blogs.blogimage}" width="100" alt="${blogs.blogheading}"/>
+                    </div>
+                    <div class="detail-blogs-body-inner-container">
+                        <div class="detail-blogs-body-container">
+                            <p class="detail-blog-date">${blogs.blogdate}</p>
+                            <div class="details-heading">
+                                <span class="blog-heading-title">HEADING:</span>
+                                <span class="detail-blog-heading">${blogs.blogheading}</span>
+                            </div>
+                            <p class="blog-sliced-detail">${blogs.blogdetail}</p>
+                            
+                        </div>
+                        <div class="detail-blog-control-btns">
+                            <button class="detailsBtn" onclick="closeDetailSection()">Cancel</button>
+                        </div>
+                    </div>
+                </div>
+            `;
+            displayAllBlogs.appendChild(createAllBlogs);
+        }
+
+    
+        const dateAPI = new Date().getFullYear();
+        document.querySelector('.copyright-year').innerHTML = dateAPI
+
+    
+    </script>
+</body>
+</html>

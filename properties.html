@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Real-Estate/about-us</title>
+    <link rel="stylesheet" href="properties.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="logo-container">
+            <a href="index.html"><h1>LOGO</h1></a>
+        </div>
+        <nav>
+
+            <img src="./assest/close-nav.png" width="50" alt="close navigation menu" class="close-nav">
+            <div class="logo-container">
+                <a href=""><h1>LOGO</h1></a>
+            </div>
+
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="index.html#about">About Us</a></li>
+                <li><a href="index.html#services">Services</a></li>
+                <li><a class="active-link" href="properties.html">Properties</a></li>
+                <li><a href="blog.html">Blogs</a></li>
+                <li><a href="contact.php">Contact</a></li>
+            </ul>
+        </nav>
+
+        <img src="./assest/open-nav.png" width="40px" alt="" class="open-nav headerDropAmination">
+    </header>
+    <main>
+        <section class="hero-section">
+            <div class="hero-container">
+                <h2>Avaliable Properties</h2>
+                <div class="hero-text-container">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo perspiciatis ad mollitia repellat sunt. Vel distinctio omnis molestias, incidunt magnam voluptatum sed, rem alias magni maiores expedita quod. Harum, assumenda.</p>
+                </div>
+            </div>
+        </section>
+        
+        <section class="search-section">
+            <h2>Search by:</h2>
+            <div class="search-container">
+                <form action="properties.html" method="post">
+                    <div>
+                        <label for="search-location">Location</label><br>
+                        <input type="text" name="search-location" id="search-location" placeholder="Osogbo">
+                    </div>
+                    <div>
+                        <label for="search-property-type">Property Type</label><br>
+                        <input type="text" name="search-property-type" id="search-property-type" placeholder="Duplex">
+                    </div>
+                    <div>
+                        <label for="search-price-range">Price Range</label><br>
+                        <input type="text" name="search-price-range" id="search-price-range" placeholder="$120,000 - $140,000">
+                    </div>
+                    <div>
+                        <label for="search-room-number">Rooms Number</label><br>
+                        <input type="text" name="search-room-number" id="search-room-number" placeholder="4 rooms">
+                    </div>
+                    <div class="search-btn-container">
+                        <button>Search</button>
+                    </div>
+                </form>
+            </div>
+        </section>
+
+        <section class="avaliable-properties">
+            <div class="properties-header">
+                <h1>Avaliable Apartment</h1>
+            </div>
+            <div class="avaliable-properties-container">
+                <div class="properties-list">
+                    <!-- properties will be display here  -->
+                </div>
+                <div class="pagination-container">
+                     <button class="prevBtn">Prev</button>
+                     <p class="pagenumber"></p>
+                     <button class="nextBtn">Next</button>
+                </div>
+            </div>
+        </section>
+
+        <div class="showlistingDetails">
+            <div class="showlistingDetailsContainer">
+                <div class="detailsHead">
+                    <h3>Lisiting Details</h3>
+                    <img src="/real-estate-website/assest/close.png" class="closeSection" onclick="hideDatailsBanners()" width="50" alt="">
+                </div>
+                <div class="showListing-Details-Container">
+                    <div class="datils-text-container">
+                        <!-- All item will be displayed -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <div class="footer-container">
+            <div class="footer-section first-footer-section">
+                <h1>LOGO</h1>
+                <p>Helping you find your <br> perfect property, every step <br>of the way</p>
+
+                <ul class="social-icon">
+                    <li><a href=""><i class="bx bxl-instagram"></i></a></li>
+                    <li><a href=""><i class="bx bxl-facebook"></i></a></li>
+                    <li><a href=""><i class="bx bxl-linkedin"></i></a></li>
+                    <li><a href=""><i class="bx bxl-twitter"></i></a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h2>Legal</h2>
+                <ul>
+                    <li><a href="">About Us</a></li>
+                    <li><a href="">Privacy Policy</a></li>
+                    <li><a href="">Terms & Conditions</a></li>
+                    <li><a href="">Agents Profile</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h2>Resources</h2>
+                <ul>
+                    <li><a href="">Buying Guide</a></li>
+                    <li><a href="">Selling Guide</a></li>
+                    <li><a href="">Renting Guilde</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h2>Quick Link</h2>
+                <ul>
+                    <li><a href="">Properties</a></li>
+                    <li><a href="">Blogs</a></li>
+                    <li><a href="">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h2>Get in touch</h2>
+                <ul>
+                    <li>Phone: <a href="tel:">+234 811 1344 1673</a></li>
+                    <li>Email: <a href="mailto:">comapny@alhuda.com</a></li>
+                    <li>Address: 121 Main road, <br>Osogbo, Osun State</li>
+                </ul>
+            </div>
+        </div>
+        <hr>
+        <p>&copy; <span class="copyright-year"></span> AL-HUDAH - All Right Reserved</p>
+    </footer>
+    <script>
+        function openNav(){
+            const navContainer = document.querySelector("nav");
+            navContainer.classList.add("active");
+        }
+        function closeNav(){
+            const navContainer = document.querySelector("nav");
+            navContainer.classList.remove("active");
+        }
+        document.querySelector(".open-nav").addEventListener("click", openNav,);
+        document.querySelector(".close-nav").addEventListener("click", closeNav,);
+
+        const navLink = document.querySelectorAll(".nav-link");
+        navLink.forEach((navLinkElement) => {
+            navLinkElement.addEventListener("click", () => {
+                closeNav();
+            });
+        });
+   
+        
+        let currentPage = 1;
+        const perPage = 10;
+
+   
+         function fetchProperties(page = 1) { 
+            currentPage = page;
+            fetch(`/real-estate-website/admin-folder/pagesAndcontent.php?fetch=listing_paginated&page=${page}`)
+            .then(response=>response.json())
+            .then(data=>{
+                console.log('Data received:', data);
+
+                const propertiesList = document.querySelector('.properties-list');
+                propertiesList.innerHTML ='';
+
+                data.listing.forEach(listing=>{
+                    const createListing = document.createElement('div');
+                    createListing.classList.add('createListing');
+
+                    createListing.innerHTML =`
+                        <div class="properties-item">
+                            <div class="image-container">
+                                <img src="/real-estate-website/ListingImages/${listing.apartmentimage}" alt="house">
+                            </div>
+                            <div class="property-details">
+                                <h3 class="property-name">${listing.apartmentname}</h3>
+                                <p class="property-location"><i class="fas fa-map-marker-alt"></i> ${listing.apartmentlocation}</p>
+                                <ul>
+                                    <li><i class="fas fa-bed"></i> ${listing.apartmentbedroom} Bed</li>
+                                    <li><i class="fas fa-bath"></i> ${listing.apartmentbathroom} Bath</li>
+                                    <li><i class="fas fa-ruler-combined"></i> ${listing.apartmentsqurefeet} sq.ft</li>
+                                </ul>
+                                <hr>
+                                <div class="amount-avaliable">
+                                    <p class="property-amount">₦${listing.apartmentamount}</p>
+
+                                    <button class="details-btn">Details</button>
+                                </div>
+                            </div>
+                        </div>
+                    `;
+                    propertiesList.appendChild(createListing)
+                    
+                    const detailsBtn = createListing.querySelector('.details-btn');
+                    detailsBtn.addEventListener('click', () => showDeatilsFunction(listing));
+                })
+                 renderPagination(data.total, data.page, data.perPage);
+
+                   document.querySelector('.avaliable-properties').scrollIntoView({
+                        behavior: 'smooth'
+                    });
+            })
+         }
+   
+        window.addEventListener('DOMContentLoaded', () => {
+            fetchProperties();
+        });
+
+        function renderPagination(total, currentPage, perPage) {
+            const totalPages = Math.ceil(total / perPage);
+
+            const prevBtn =   document.querySelector('.prevBtn');
+            prevBtn.disabled = currentPage === 1;
+            prevBtn.addEventListener('click',()=> fetchProperties(currentPage - 1)) 
+
+            const nextBtn = document.querySelector('.nextBtn');
+            nextBtn.disabled = currentPage === totalPages;
+            nextBtn.addEventListener('click',()=> fetchProperties(currentPage + 1)) 
+
+            const pageInfo = document.querySelector('.pagenumber');
+            pageInfo.textContent = `Page ${currentPage} of ${totalPages}`;
+    }
+
+
+        function showDeatilsFunction(listing) {
+            showDatailsBanners();
+            const displayDetails = document.querySelector('.datils-text-container');
+            displayDetails.innerHTML = ''; // Clear previous content
+
+            const detailsListingContainer = document.createElement('div');
+
+            detailsListingContainer.innerHTML = `
+                <div class="flex-details-container">
+                    <div class="right-details-container">
+                        <img src="/real-estate-website/ListingImages/${listing.apartmentimage}"/>
+                    </div>
+                    <div class="left-details-container">
+                        <h3>${listing.apartmentname}</h3>
+                        
+                        <div class="details-loaction-container">
+                            <p><i class="fas fa-map-marker-alt"></i> ${listing.apartmentlocation}</p>
+                        </div>
+
+                        <div class="details-listing-details">
+                            <p><i class="fas fa-bed"></i> ${listing.apartmentbedroom} Bedroom</p> |
+                            <p><i class="fas fa-bath"></i> ${listing.apartmentbathroom} Bathbath</p> |
+                            <p><i class="fas fa-ruler-combined"></i> ${listing.apartmentsqurefeet} sqft</p> |
+                            <p><i class="fas fa-money-bill-wave"></i> ₦${listing.apartmentamount}</p>
+                        </div>
+                        <div class="details-details-container">
+                            <p>${listing.apartmentdetails}</p>
+                        </div>
+                        <div class="details-buttons">
+                            <button onclick="hideDatailsBanners()">Cancel</button>
+                        </div>
+                    </div>
+                </div>
+            `;
+
+            displayDetails.appendChild(detailsListingContainer);
+
+        }
+
+        function showDatailsBanners(){
+            const openSeaction = document.querySelector('.showlistingDetails')
+            openSeaction.classList.add('active');
+        }
+        function hideDatailsBanners(){
+            const openSeaction = document.querySelector('.showlistingDetails')
+            openSeaction.classList.remove('active');
+        }
+
+        const dateAPI = new Date().getFullYear();
+        document.querySelector('.copyright-year').innerHTML = dateAPI
+   </script>
+</body>
+</html>

@@ -1,0 +1,208 @@
+@import url('https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200..1000;1,200..1000&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+*,html{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    width: 100%;
+    height: 100vh;
+    background: lightblue;
+    font-family: sans-serif;
+}
+section{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.section-container{
+    width: 40%;
+    background: #ffffff;
+    border-radius: 20px;
+    padding: 10px;
+}
+.logo-container{
+    width: 90%;
+    margin: 20px auto 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.logo-container div{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+.logo-container div img{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+.logo-container h1{
+    font: 700 2rem 'mulish';
+    letter-spacing: 5px;
+}
+.logo-container a{
+    text-decoration: none;
+    font: 600 20px 'mulish';
+}
+.title-text{
+    width: 90%;
+    margin: 20px auto 10px;
+    display: flex;
+    align-items: start;
+    justify-content: start;
+    gap: 10px;
+    flex-direction: column;
+}
+.title-text h3{
+    font: 800 30px 'mulish';
+    letter-spacing: 1px;
+}
+.title-text p{
+    font: 600 20px 'mulish';
+    font-style: oblique;
+    letter-spacing: 1px;
+}
+.response{
+    text-align: center;
+    font: 600 20px 'mulish';
+    color: white;
+    background: red;
+    padding: 8px 0;
+}
+
+form{
+    width: 90%;
+    margin: 20px auto;
+    /* border: 1px solid black; */
+}
+form label{
+    font: 600 20px 'mulish';
+}
+form input::placeholder{
+    font-size: 18px;
+    color: #767676;
+}
+.email-container, .password-container{
+    /* border: 1px solid black; */
+    margin: 8px 0 30px;
+    width: 100%;
+    height: 50px;
+    border-radius: 10px;
+    background: #eef4f6;
+}
+.email-container input{
+    width: 100%;
+    height: 100%;
+    border: 2px solid #452c51a7;
+    outline: none;
+    border-radius: 10px;
+    padding: 0 8px;
+    font: 600 20px 'mulish';
+    
+}
+.email-container input:focus{
+    background: transparent;
+    border-color: #9473f7;
+}
+.email-container input:not(:placeholder-shown) {
+    background: transparent;
+    border-color: #9473f7;
+}
+.password-container{
+    background: white;
+}
+.password-input-container{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    /* gap: 5px; */
+}
+.password-input-container input{
+    width: 100%;
+    height: 100%;
+    border: 2px solid #452c51a7;
+    outline: none;
+    border-radius: 10px;
+    padding: 0 8px;
+    font: 600 20px 'mulish';
+}
+.password-input-container input:focus{
+    background: #eef4f6;
+    border-color: #9473f7;
+}
+.password-input-container input:not(:placeholder-shown) {
+    background: #eef4f6;
+    border-color: #9473f7;
+}
+.toggle-password{
+    margin: 0 5px;
+    background: white;
+}
+.submit-container{
+    width: 30%;
+    height: 50px;
+    border-radius: 20px;
+}
+.submit-container input{
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+    font: 600 20px 'mulish';
+    border: none;
+    outline: none;
+    background: #9898ff;
+    letter-spacing: 1px;
+    color: white;
+    cursor: pointer;
+}
+.exitpage{
+    text-align: center;
+    font: 500 18px 'mulish';
+}
+.exitpage a{
+    text-decoration: none;
+}
+
+
+@media screen and (max-width: 767px){
+    .section-container {
+        /* max-width: 400px; */
+        width: 100%;
+        border-radius: 0;
+    }
+    .logo-container {
+        width: 100%;
+        margin: 20px 0 10px;
+    }
+    .logo-container h1 {
+        font: 700 1rem 'mulish';
+    }
+    .logo-container a {
+        font: 600 16px 'mulish';
+    }
+    .title-text h3 {
+        font: 800 25px 'mulish';
+    }
+    .title-text p {
+        font: 600 18px 'mulish';
+    }
+    .submit-container {
+        width: 50%;
+    }
+}
+
+ @media screen and (min-width: 768px) and (max-width: 1023px) {
+    .section-container {
+        max-width: 600px;
+        width: 100%;
+    }
+}
+ 

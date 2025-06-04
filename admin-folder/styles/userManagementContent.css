@@ -1,0 +1,744 @@
+@import url('https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200..1000;1,200..1000&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+section{
+    width: 100%;
+}
+
+.response-container-section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #c5c6c7;
+    border: 1px solid #8d9397;
+    padding: 10px 15px;
+    border-radius: 5px;
+    margin: 10px auto 20px;
+    max-width: 600px;
+    position: relative;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    transition: opacity 0.3s ease;
+}
+
+.response-container {
+    flex: 1;
+    position: relative;
+}
+
+.response {
+    margin: 0;
+    font: 800 18px 'mulish';
+    color: #bd0202;
+    letter-spacing: 1px;
+}
+
+.close-response {
+    cursor: pointer;
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    right: 7px;
+    z-index: 999;
+}
+    
+
+
+.upload-image-container{
+    width: 100%;
+    height: 100vh;
+    background: #00000081;
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 999;
+    display: grid;
+    place-items: center;
+    display: none;
+}
+.upload-image-container.active{
+    display: block;
+}
+.inner-upload-image{
+    background: whitesmoke;
+    width: 40%;
+    height: 80%;
+    border-radius: 8px;
+    position: relative;
+}
+.close-banner{
+    position: absolute;
+    right: 0;
+    top: 0;
+    cursor: pointer;
+}
+.inner-upload-image h3{
+    font: 600 20px 'mulish';
+    text-align: center;
+    margin: 20px 0;
+}
+.preview-image-input{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    flex-direction: column;
+}
+.preview-image{
+    border: 5px solid #00000054;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    margin-top: 20px;
+}
+.preview-image img{
+    border-radius: 50%;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.picture-input-container{
+    width: 100%;
+    margin: 30px auto 0;
+    gap: 30px;
+}
+.picture-input-container form{
+    text-align: center;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.picture-input-container form label{
+    font: 500 18px 'mulish';
+}
+.picture-input-container form input[type = 'file']{
+    border: 1px solid #00000045;
+    padding: 10px 0 10px 10px;
+    border-radius: 6px;
+}
+.picture-input-container form input[type = 'submit']{
+    padding: 10px 20px;
+    cursor: pointer;
+    font: 500 16px 'mulish';
+    background: darkgreen;
+    color: whitesmoke;
+    border: none;
+    border-radius: 6px;
+}
+
+
+.admin-user-profile{
+    width: 30%;
+    margin-top: 10px;
+    padding: 10px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-color: #53cbec;
+    text-align: center;
+    position: fixed;
+    right: -1200px;
+    top: 65px;
+    transition: 0.3s ease-in-out;
+    /* color: white; */
+}
+.admin-user-profile.active{
+    right: 10px;
+}
+.admin-user-profile-container{
+    position: relative;
+    width: 100%;
+}
+.closeProfile{
+    position: absolute;
+    right: 0;
+    top: 0;
+    cursor: pointer;
+}
+.admin-image-name-email{
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.admin-image-name-email .admin-image{
+    width: 100px;
+    height: 100px;
+}
+.admin-image-name-email .admin-image img{
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+}
+.admin-image-name-email .admin-name-email{
+    line-height: 1.9;
+}
+.admin-image-name-email .admin-name-email h3{
+    font: 600 18px 'mulish';
+    text-transform: capitalize;
+}
+.admin-image-name-email .admin-name-email p{
+    font: 400 16px 'mulish';
+       text-transform: lowercase;
+}
+.admin-image-name-email .admin-name-email button{
+    font: 400 16px 'mulish';
+    background: #4a00e0;
+    color: whitesmoke;
+    border: none;
+    border-radius: 6px;
+    padding: 8px 15px;
+    margin: 10px 0;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+}
+.admin-image-name-email .admin-name-email button:hover{
+    box-shadow: 0 0 10px #0000009d;
+}
+.admin-gender p, .admin-postion p, .admin-address p{
+    font: 400 1rem 'mulish';
+    text-transform: capitalize;
+    margin-top: 8px;
+}
+
+
+
+
+.header-title{
+    width: 100%;
+    margin-top: 10px;
+}
+.header-title .logo h2{
+    font: 600 30px 'mulish';
+    letter-spacing: 1px;
+    color: midnightblue;
+}
+.header-title .logo p{
+    font: 500 18px 'mulish';
+    margin-top: 10px;
+}
+
+.register-agent {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    align-items: center;
+    justify-content: center;
+    z-index: 9999;
+    display: none;
+}
+.register-agent.active{
+    display: flex;
+}
+
+.register-agent-container {
+    background-color: #ffffff;
+    padding: 30px 40px;
+    border-radius: 8px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    width: 100%;
+    max-width: 500px;
+    margin: 0 auto;
+    position: relative;
+    max-height: 90vh;
+    overflow-y: auto;
+    scroll-behavior: smooth;
+}
+.register-agent-container::-webkit-scrollbar {
+    width: 8px;
+}
+
+.register-agent-container::-webkit-scrollbar-thumb {
+    background-color: #00000033;
+    border-radius: 8px;
+}
+
+.register-agent-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 25px;
+}
+
+.register-agent-header h3 {
+    margin: 0;
+    font-size: 1.5rem;
+    color: #333;
+    font-family: 'mulish';
+}
+
+.register-agent-header img {
+    cursor: pointer;
+    border: 1px solid #333;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    margin-bottom: 6px;
+    font-weight: 500;
+    color: #333;
+    font-family: 'mulish';
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+select {
+    padding: 10px 14px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 1rem;
+    transition: border-color 0.2s ease;
+}
+
+input:focus,
+select:focus {
+    border-width: 2px;
+    border-color: #3f8efc;
+    outline: none;
+}
+
+.button-container {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.button-container input[type="submit"] {
+    background-color: #3f8efc;
+    color: #fff;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 8px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.button-container input[type="submit"]:hover {
+    background-color: #276fe0;
+}
+
+
+
+/* -------agent displaying ------- */
+.all-agent, .all-client{
+    width: 100%;
+    padding: 10px;
+}
+.agent-header, .client-header{
+    background: #f5f5f5;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    border: 1px solid #dddddd;
+    margin-top: 1rem;
+}
+.agent-header h3, .client-header h3{
+    font: 800 25px 'mulish';
+    letter-spacing: 1px;
+    color: #0e57cc;
+    text-transform: uppercase;
+}
+.agent-header .agent-header-btns, .client-header .client-header-btns{
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+.agent-header .agent-header-btns button, .client-header .client-header-btns button {
+    padding: 10px 20px;
+    border-radius: 6px;
+    font: 500 1rem 'Mulish', sans-serif;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.2s ease;
+    border: none;
+    outline: none;
+}
+
+.agent-header .agent-header-btns button:nth-child(1), .client-header .client-header-btns button:nth-child(1) {
+    background: #cce6f6;
+    color: #1a1a1a;
+}
+
+.agent-header .agent-header-btns button:nth-child(1):hover,.client-header .client-header-btns button:nth-child(1):hover {
+    background: #add8f1;
+    transform: scale(1.03);
+}
+
+.agent-header .agent-header-btns button:nth-child(2), .client-header .client-header-btns button:nth-child(2) {
+    background: #0e57cc;
+    color: #fff;
+}
+
+.agent-header .agent-header-btns button:nth-child(2):hover, .client-header .client-header-btns button:nth-child(2):hover{
+    background: #094bb0;
+    transform: scale(1.03);
+}
+
+.agent-search-container, .client-search-container{
+    border: 1px solid #333;
+    display: flex;
+    align-items: center;
+    height: 40px;
+    width: 40%;
+    border-radius: 20px;
+    background: white;
+}
+.agent-search-container input, .client-search-container input{
+    background: transparent;
+    height: 100%;
+    width: 80%;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+    border: none;
+    font: 500 1rem 'mulish';
+    padding: 0 10px;
+}
+
+.agent-search-container button, .client-search-container button{
+    width: 25%;
+    height: 100%;
+    border-radius: 20px;
+    background: #0e57cc;
+    color: whitesmoke;
+    font: 500 1rem 'mulish';
+    border: none;
+    cursor: pointer;
+}
+
+.agent-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-family: 'mulish', sans-serif;
+    table-layout: fixed;
+}
+
+.agent-table th,
+.agent-table td {
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: left;
+    border-top: none;
+    text-align: center;
+}
+.agent-table th:nth-child(1), /* s/n */
+.agent-table td:nth-child(1){
+    width: 5%;
+}
+.agent-table th:nth-child(2), /* Name */
+.agent-table td:nth-child(2){
+    width: 15%;
+     word-break: normal;
+}
+
+.agent-table th:nth-child(3), /* Email */
+.agent-table td:nth-child(3) {
+    width: 20%;
+    word-break:break-all;
+}
+.agent-table th:nth-child(4){
+    width: 10%;
+    word-break: normal;
+}/* phone number */
+.agent-table td:nth-child(4){
+    width: 10%;
+    word-break: break-all;
+}/* phone number */
+
+.agent-table th:nth-child(6), /* Address */
+.agent-table td:nth-child(6) {
+    width: 25%;
+    word-break: break-word;
+}
+
+.agent-table th {
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+.agent-table tr:nth-child(even) {
+    background-color: #fafafa;
+}
+
+.agent-table tr:hover {
+    background-color: #f1f1f1;
+}
+
+.agent-table button {
+    padding: 6px 10px;
+    background-color: #e74c3c;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+.agent-table .edit-agent{
+    background-color: #0e57cc;
+}
+.agent-table button:hover {
+    background-color: #c0392b;
+}
+.agent-table .edit-agent:hover{
+    background-color: #094bb0;
+}
+
+/* show all agent ------------ */
+
+
+.show-all-agent{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.6);
+    z-index: 9999;
+    display: none;
+}
+.show-all-agent.active{
+    display: block;
+}
+
+.show-all-agent-container{
+    width: 95%;
+    height: 97%;
+    margin: 10px auto 0 auto;
+    background: whitesmoke;
+    overflow-y: auto;
+}
+
+.show-all-agent .close-show-all-agent{
+    position: absolute;
+    right: 0px;
+    top: 15px;
+    background: white;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+/* --------update agent--------- */
+
+.update-agent{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.6);
+    z-index: 9999;
+    display: none;
+}
+.update-agent.active{
+    display: block;
+}
+
+
+/* ------deleteing style--------- */
+
+.deleteAgent-section{
+    background: #d4d3d3;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 999;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    display: none;
+}
+.deleteAgent-section.active{
+    display: flex;
+}
+.delete-container{
+    background: whitesmoke;
+    width: 40%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.delete-container h3{
+    color: red;
+    font: 500 20px 'mulish';
+    text-align: center;
+    margin-bottom: 20px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+
+.delete-container p{
+    text-align: center;
+    font: 700 20px 'mulish';
+    letter-spacing: 1px;
+    margin-bottom: 20px;
+}
+.cancel-delete-btn{
+    /* border: 1px solid black; */
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 20px;
+
+}
+.cancel-delete-btn button{
+    padding: 10px 20px;
+    border: none;
+    border-radius: 6px;
+    font: 500 17px 'mulish';
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+}
+.cancel-delete-btn button:nth-child(1){
+    background: red;
+    color: white;
+}
+.cancel-delete-btn button:nth-child(2){
+    background: white;
+    color: black;
+}
+.cancel-delete-btn button:nth-child(1):hover{
+    transform: scaleX(1.1);
+    box-shadow: 0 0 8px rgb(79, 78, 78);
+}
+.cancel-delete-btn button:nth-child(2):hover{
+    transform: scaleX(1.1);
+    box-shadow: 0 0 8px rgb(79, 78, 78);
+    background: gray;
+    color: white;
+}
+
+
+
+@media screen and (max-width: 767px){   
+
+    .admin-user-profile{
+        width: 95%;
+        padding: 10px;
+        background: #bee7f3;
+    }
+    .logo{
+        margin-left: 0;
+    }
+    .header-title .logo h2 {
+        font: 600 25px 'mulish';
+        text-align: center;
+    }
+    .header-title .logo p {
+        text-align: center; 
+        font-size: 17px;
+    }
+    .all-agent-container, .display-all-agent{
+        width: 100%;
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+    }
+    .agent-table {
+        min-width: 800px; /
+    }
+    .agent-table th,
+    .agent-table td {
+        padding: 8px;
+        font-size: 14px;
+    }
+
+    .agent-header {
+        flex-direction: column;
+        gap: 10px;
+    }
+    .agent-search-container{
+        max-width: 300px;
+        width: 100%;
+    }
+    .agent-header .agent-header-btns{
+        gap: 10px;
+        flex-direction: column;
+    }
+    .show-all-agent .close-show-all-agent {
+        right: 25px;
+        background: red;
+    }
+
+    .delete-container {
+        width: 90%;
+    }
+}
+
+
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+     .admin-user-profile{
+        width: 60%;
+        padding: 10px;
+        background: #bee7f3;
+    }   
+    .logo{
+        margin-left: 0;
+    }
+    .header-title .logo h2 {
+        font: 600 25px 'mulish';
+        text-align: center;
+    }
+    .header-title .logo p {
+        text-align: center; 
+        font-size: 17px;
+    }
+    .all-agent-container, .display-all-agent{
+        width: 100%;
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+    }
+    .agent-table {
+        min-width: 800px; /
+    }
+    .agent-table th,
+    .agent-table td {
+        padding: 8px;
+        font-size: 14px;
+    }
+
+    .agent-header {
+        flex-direction: column;
+        gap: 10px;
+    }
+    .agent-search-container{
+        max-width: 300px;
+        width: 100%;
+    }
+    .agent-header .agent-header-btns{
+        gap: 10px;
+    }
+    .show-all-agent .close-show-all-agent {
+        right: 25px;
+        background: red;
+    }
+}

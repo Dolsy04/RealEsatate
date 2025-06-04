@@ -1,0 +1,1057 @@
+@import url('https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200..1000;1,200..1000&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+section{
+    width: 100%;
+}
+
+.response-container-section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #c5c6c7;
+    border: 1px solid #8d9397;
+    padding: 10px 15px;
+    border-radius: 5px;
+    margin: 10px auto 20px;
+    max-width: 600px;
+    position: relative;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    transition: opacity 0.3s ease;
+}
+
+.response-container {
+    flex: 1;
+    position: relative;
+}
+
+.response {
+    margin: 0;
+    font: 800 18px 'mulish';
+    color: #bd0202;
+    letter-spacing: 1px;
+}
+
+.close-response {
+    cursor: pointer;
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    right: 7px;
+    z-index: 999;
+}
+
+.upload-image-container{
+    width: 100%;
+    height: 100vh;
+    background: #00000081;
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 999;
+    display: grid;
+    place-items: center;
+    display: none;
+}
+.upload-image-container.active{
+    display: block;
+}
+.inner-upload-image{
+    background: whitesmoke;
+    width: 40%;
+    height: 80%;
+    border-radius: 8px;
+    position: relative;
+}
+.close-banner{
+    position: absolute;
+    right: 0;
+    top: 0;
+    cursor: pointer;
+}
+.inner-upload-image h3{
+    font: 600 20px 'mulish';
+    text-align: center;
+    margin: 20px 0;
+}
+.preview-image-input{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    flex-direction: column;
+}
+.preview-image{
+    border: 5px solid #00000054;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    margin-top: 20px;
+}
+.preview-image img{
+    border-radius: 50%;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.picture-input-container{
+    width: 100%;
+    margin: 30px auto 0;
+    gap: 30px;
+}
+.picture-input-container form{
+    text-align: center;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.picture-input-container form label{
+    font: 500 18px 'mulish';
+}
+.picture-input-container form input[type = 'file']{
+    border: 1px solid #00000045;
+    padding: 10px 0 10px 10px;
+    border-radius: 6px;
+}
+.picture-input-container form input[type = 'submit']{
+    padding: 10px 20px;
+    cursor: pointer;
+    font: 500 16px 'mulish';
+    background: darkgreen;
+    color: whitesmoke;
+    border: none;
+    border-radius: 6px;
+}
+
+
+.admin-user-profile{
+    width: 30%;
+    margin-top: 10px;
+    padding: 10px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-color: #53cbec;
+    text-align: center;
+    position: fixed;
+    right: -1200px;
+    top: 65px;
+    transition: 0.3s ease-in-out;
+    /* color: white; */
+}
+.admin-user-profile.active{
+    right: 10px;
+}
+.admin-user-profile-container{
+    position: relative;
+    width: 100%;
+}
+.closeProfile{
+    position: absolute;
+    right: 0;
+    top: 0;
+    cursor: pointer;
+}
+.admin-image-name-email{
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.admin-image-name-email .admin-image{
+    width: 100px;
+    height: 100px;
+}
+.admin-image-name-email .admin-image img{
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+}
+.admin-image-name-email .admin-name-email{
+    line-height: 1.9;
+}
+.admin-image-name-email .admin-name-email h3{
+    font: 600 18px 'mulish';
+    text-transform: capitalize;
+}
+.admin-image-name-email .admin-name-email p{
+    font: 400 16px 'mulish';
+       text-transform: lowercase;
+}
+.admin-image-name-email .admin-name-email button{
+    font: 400 16px 'mulish';
+    background: #4a00e0;
+    color: whitesmoke;
+    border: none;
+    border-radius: 6px;
+    padding: 8px 15px;
+    margin: 10px 0;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+}
+.admin-image-name-email .admin-name-email button:hover{
+    box-shadow: 0 0 10px #0000009d;
+}
+.admin-gender p, .admin-postion p, .admin-address p{
+    font: 400 1rem 'mulish';
+    text-transform: capitalize;
+    margin-top: 8px;
+}
+
+
+
+.header-title{
+    width: 100%;
+    margin-top: 10px;
+}
+.header-title .logo h2{
+    font: 600 30px 'mulish';
+    letter-spacing: 1px;
+    color: midnightblue;
+}
+.header-title .logo p{
+    font: 500 18px 'mulish';
+    margin-top: 10px;
+}
+
+
+.top-banners-section{
+    width: 90%;
+    margin: 20px auto;
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    /* justify-content: center; */
+}
+
+.total-messages-banner{
+    width: 100%;
+    background: whitesmoke;
+    padding: 20px;
+    border-radius: 10px;
+    transition: 0.3s ease-in-out;
+}
+.total-message-banner-container{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.total-message-banner-container .total-message-container p:nth-child(1){
+    font: 500 16px 'mulish';
+    margin-bottom: 10px;
+    letter-spacing: 1px;
+    transition: 0.3s ease-in-out;
+}
+.total-message-banner-container .total-message-container p .totalMessageCount, .subcriber-count{
+    font: 800 20px 'mulish';
+    margin-bottom: 10px;
+    letter-spacing: 1px;
+    transition: 0.3s ease-in-out;
+}
+.total-message-banner-container .icons i{
+    background: white;
+    color: midnightblue;
+    padding: 10px;
+    border-radius: 50%;
+    font-size: 20px;
+    transition: 0.3s ease-in-out;
+}
+.total-message-not-read .not-read-btn{
+    width: 100%;
+    display: flex;
+    align-items: start;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 20px;
+}
+.not-read-read{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+.total-message-not-read .not-read-btn p{
+    font: 500 14px 'mulish';
+    color: red;
+}
+.total-message-not-read .not-read-btn p:nth-child(2){
+    color: #360068;
+}
+.total-message-banner-container .not-read-btn button{
+    background: transparent;
+    border: none;
+    outline: none;
+    color: #0e57cc;
+    font: 400 16px 'mulish';
+    letter-spacing: 1px;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+}
+.subcriber-btn-container{
+    margin-top: 20px;
+}
+.total-messages-banner:hover{
+    box-shadow: 0 0 10px #0000004a;
+}
+.total-messages-banner:hover .total-message-banner-container .total-message-container p{
+   font-style: oblique;
+}
+.total-messages-banner:hover .total-message-banner-container .icons i{
+    background: midnightblue;
+    color: white;
+}
+.total-message-banner-container div button:hover{
+    text-decoration: underline;
+}
+
+
+/* -------------------Messages------------------ */
+.messages-containers{
+    width: 100%;
+    padding: 10px;
+}
+.messages-containers-header{
+    background: #f5f5f5;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    border: 1px solid #dddddd;
+    margin-top: 1rem;
+}
+.messages-containers-header h3{
+    font: 800 25px 'mulish';
+    letter-spacing: 1px;
+    color: #0e57cc;
+    text-transform: uppercase;
+}
+.messages-containers-header .messages-header-btns{
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+.messages-containers-header .messages-header-btns button {
+    padding: 10px 20px;
+    border-radius: 6px;
+    font: 500 1rem 'Mulish', sans-serif;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.2s ease;
+    border: none;
+    outline: none;
+     background: #0e57cc;
+    color: #fff;
+}
+.messages-containers-header .messages-header-btns button:hover{
+    background: #094bb0;
+    transform: scale(1.03);
+}
+
+.messages-search-container{
+    border: 1px solid #333;
+    display: flex;
+    align-items: center;
+    height: 40px;
+    width: 40%;
+    border-radius: 20px;
+    background: white;
+}
+.messages-search-container input{
+    background: transparent;
+    height: 100%;
+    width: 80%;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+    border: none;
+    outline: none;
+    font: 500 1rem 'mulish';
+    padding: 0 10px;
+}
+
+.messages-search-container button{
+    width: 25%;
+    height: 100%;
+    border-radius: 20px;
+    background: #0e57cc;
+    color: whitesmoke;
+    font: 500 1rem 'mulish';
+    border: none;
+    cursor: pointer;
+}
+
+.chat-container{
+    width: 100%;
+    background: whitesmoke;
+    padding: 10px;
+}
+.chatContainer{
+    background: #dfdede;
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    padding: 10px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+.chatContainer:hover{
+    box-shadow: 0 0 8px #9590903f;
+}
+.chatIndex{
+    width: 3%;
+    border-right: 1px solid black;
+}
+.chatNameEmail{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    line-height: 1.9;
+}
+.chatNameEmail p:nth-child(1){
+    font: 700 18px 'mulish';
+    letter-spacing: 1px;
+}
+.chatNameEmail p:nth-child(2){
+    font: 500 18px 'mulish';
+    letter-spacing: 1px;
+}
+.chatNameEmail p:nth-child(2) a{
+    text-decoration: none;
+    color: midnightblue;
+    font-size: 15px;
+}
+.chatNameEmail .status-time-date{
+    line-height: 1.5;
+    text-align: right;
+}
+.chatNameEmail .status-time-date p:nth-child(1){
+    font: 600 14px 'mulish';
+    letter-spacing: 1px;
+    margin-bottom: 5px;
+    color: red;
+}
+.messageStatus.read{
+    color: blue;
+}
+.chatNameEmail .status-time-date p:nth-child(2){
+    font: 400 15px 'roboto';
+    letter-spacing: 1px;
+    color: darkcyan;
+}
+.chatNameEmail .status-time-date p:nth-child(3){
+    font: 400 15px 'roboto';
+    letter-spacing: 1px;
+    color: darkcyan;
+}
+.message-details-banner{
+    background: #0000004a;
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 999;
+    display: none;
+    align-items: start;
+    justify-content: center;
+}
+.message-details-banner.active{
+    display: flex;
+}
+.message-details-container{
+    width: 40%;
+    background: whitesmoke;
+    margin-top: 40px;
+    padding: 10px;
+    border-radius: 8px;
+}
+.top-message-header{
+    background: whitesmoke;
+    border-bottom: 1px solid gray;
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+    position: sticky;
+    top: 0;
+    z-index: 1;
+}
+.back-arrow-container{
+    background: red;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+.back-arrow-container .back-arrow-to-home{
+    font-weight: 800;
+    font-size: 15px;
+    color: white;
+}
+.back-arrow-container:hover{
+    background: #bd0202;
+}
+.back-arrow-container:hover .back-arrow-to-home{
+    color: whitesmoke;
+}
+.name-email-chat{
+    /* border: 1px solid black; */
+    width: 100%;
+    line-height: 1.2;
+}
+
+.name-email-chat p:nth-child(1){
+    font: 500 17px 'mulish';
+    margin-bottom: 5px;
+}
+.name-email-chat p:nth-child(2) a{
+    font: 500 15px 'mulish';
+    letter-spacing: 1px;
+    text-decoration: none;
+    color: #0e57cc;
+}
+.showUserChat{
+    width: 95%;
+    margin: 0 auto;
+    border-radius: 8px;
+    padding: 8px;
+    background: lightgray;
+}
+.showUserChat p{
+    line-height: 1.5;
+    font: 500 16px 'mulish';
+}
+.chatButton{
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap:20px;
+}
+.chatButton button{
+    padding: 10px 15px;
+    border-radius: 6px;
+    border: none;
+    font: 500 17px 'mulish';
+    letter-spacing: 1px;
+    cursor: pointer;
+    background: red;
+    color: white;
+}
+
+/* all------messages------design */
+
+.all-messages-section{
+    width: 100%;
+    height: 100vh;
+    background: #33333382;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 999;
+    display: none;
+}
+.all-messages-section.active{
+    display: block;
+}
+.all-messages-container{
+    width: 80%;
+    height: 100%;
+    margin: 0 auto;
+    background: whitesmoke;
+    /* overflow: hidden; */
+    position: relative;
+}
+
+.header-all-message{
+    width: 100%;
+    background: white;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.header-all-message h2{
+    font: 800 25px 'mulish';
+    letter-spacing: 1px;
+    color: #0e57cc;
+    text-transform: uppercase;
+    margin-left: 30px;
+}
+.header-all-message .search-input{
+    border: 1px solid #876262;
+    width: 35%;
+    height: 40px;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.header-all-message .search-input input{
+    width: 70%;
+    height: 100%;
+    border: none;
+    outline: none;
+    padding: 0 10px;
+    background: transparent;
+    font: 500 16px 'mulish';
+}
+.header-all-message .search-input button{
+    width: 30%;
+    height: 40px;
+    border: none;
+    background: blue;
+    border-radius: 20px;
+    color: whitesmoke;
+    font: 500 17px 'mulish';
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+.header-all-message .all-read-notread{
+    margin-right: 30px;
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+.header-all-message .all-read-notread{
+    font: 500 15px 'mulish';
+    color: red;
+}
+.header-all-message .all-read-notread p:nth-child(1){
+    font: 500 15px 'mulish';
+    color: #333;
+}
+.header-all-message .all-read-notread p:nth-child(2){
+    font: 500 15px 'mulish';
+    color: #360068;
+}
+.show-all-meassage-section{
+    padding: 10px;
+    width: 100%;
+    height: 90%;
+    overflow-Y: auto;
+    background: #efeded;
+}
+.all-chat-container{
+    overflow-y: auto    ;
+    margin-top: 30px;
+}
+.close-all-message{
+    position: absolute;
+    right: -60px;
+    top: 10px;
+    background: white;
+    padding: 8px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+
+/* ------------email-subscribers------------ */
+
+.all-email-subcribers-section{
+    width: 100%;
+    height: 100vh;
+    background: #33333382;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 999;
+    display: none;
+}
+.all-email-subcribers-section.active{
+    display: block;
+}
+.email-subcriber-container{
+    width: 80%;
+    height: 100%;
+    margin: 0 auto;
+    background: whitesmoke;
+    /* overflow: hidden; */
+    position: relative;
+}
+
+.email-subcriber-header{
+    width: 100%;
+    background: white;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.email-subcriber-header h2{
+    font: 800 25px 'mulish';
+    letter-spacing: 1px;
+    color: #0e57cc;
+    text-transform: uppercase;
+    margin-left: 30px;
+}
+.email-subcriber-header .subcriber-search-input{
+    border: 1px solid #876262;
+    width: 35%;
+    height: 40px;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.email-subcriber-header .subcriber-search-input input{
+    width: 70%;
+    height: 100%;
+    border: none;
+    outline: none;
+    padding: 0 10px;
+    background: transparent;
+    font: 500 16px 'mulish';
+}
+.email-subcriber-header .subcriber-search-input button{
+    width: 30%;
+    height: 40px;
+    border: none;
+    background: blue;
+    border-radius: 20px;
+    color: whitesmoke;
+    font: 500 17px 'mulish';
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+.total-emails-container{
+    margin-right: 40px;
+}
+.total-emails-container p{
+    font: 500 16px 'mulish';
+    color: #333;
+}
+.getMails{
+    width: 100%;
+}
+.getMails div{
+    width: 98%;
+    margin: 20px auto 0 auto;
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    padding: 15px 0;
+    border: 1px solid #cec9c9;
+    border-radius: 6px;
+}
+.getMails div p:nth-child(1){
+    border-right: 1px solid black;
+    width: 4%;
+    padding-left: 10px;
+    font: 500 16px 'mulish';
+}
+.getMails div p:nth-child(2){
+    width: 96%;
+    padding-left: 10px;
+    font: 500 16px 'mulish';
+    letter-spacing: 1px;
+}
+.close-all-mails{
+    position: absolute;
+    right: -60px;
+    top: 10px;
+    background: white;
+    padding: 8px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+
+
+
+
+
+
+
+@media screen and (max-width: 767px){   
+
+    .admin-user-profile{
+        width: 95%;
+        padding: 10px;
+        background: #bee7f3;
+    }
+    .logo{
+        margin-left: 0;
+    }
+    .logo h2{
+        font-size: 20px;
+        text-align: center;
+    }
+    .logo p{
+        text-align: center;
+        font-size: 17px;
+    }
+
+    .top-banners-section {
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+    }
+
+    .messages-containers {
+        padding: 5px;
+    }
+    .messages-containers-header {
+        flex-direction: column;
+        gap: 8px;
+        padding: 5px;
+    }
+    .messages-containers-header h3 {
+        font-size: 20px;
+    }
+    .messages-search-container {
+        max-width: 250px;
+        width: 100%; 
+    }
+    .chatContainer {
+        width: 100%;
+        gap: 20px;
+        padding: 5px;
+    }
+    .chatNameEmail {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        line-height: 1.9;
+        
+        align-items: start;
+        word-break: break-all;
+        flex-direction: column;
+    }
+    .chatNameEmail .status-time-date {
+        width: 100%;
+        display: flex;
+        align-items: flex-end;
+        justify-content: flex-end;
+        flex-direction: column;
+    }
+    .chatNameEmail p:nth-child(1) {
+        font: 600 15px 'mulish';
+        text-align: left;
+    }
+    .chatNameEmail p:nth-child(2) a {
+        font-size: 12px;
+        font-weight: 600;
+    }
+    .chatIndex {
+        border-right: none;
+    }
+
+
+
+    .close-all-message {
+        right: 0;
+        top: 5px;
+        background: red;
+        /* padding: 5px; */
+        width: 40px;
+    }
+    .all-messages-container {
+        width: 98%;
+    }
+    .header-all-message {
+        flex-direction: column;
+        justify-content: center;
+        gap: 10px;
+    }
+    .header-all-message h2 {
+        font-size: 20px;
+        margin-left: 0px;
+    }
+    .header-all-message .search-input {
+        width: 90%;
+    }
+    .header-all-message .all-read-notread {
+        text-align: center;
+        margin-right: 0;
+        justify-content: center;
+    }
+    .show-all-meassage-section {
+        height: 75%;
+    }
+
+    .message-details-container {
+        width:90%;
+    }
+
+     .email-subcriber-container {
+        width: 95%;
+        height: 100%;
+    }
+    .email-subcriber-header {
+        gap: 8px;
+        flex-direction: column;
+    }
+    .email-subcriber-header .subcriber-search-input {
+        max-width: 400px;
+        width: 100%;
+    }
+    .close-all-mails {
+        right: 10px;
+        top: 10px;
+        background: red;
+    }
+    .getMails div p:nth-child(2) {
+        padding-left: 0px;
+        word-break: break-all;
+    }
+    .getMails div {
+        gap: 20px;
+    }
+    .getMails div p:nth-child(1) {
+        border-right: 1px solid black;
+        width: 8%;
+    }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+     .admin-user-profile{
+        width: 60%;
+        padding: 10px;
+        background: #bee7f3;
+    }   
+
+     .logo{
+        margin-left: 0;
+    }
+    .logo h2{
+        font-size: 20px;
+        text-align: center;
+    }
+    .logo p{
+        text-align: center;
+        font-size: 17px;
+    }
+
+    .top-banners-section {
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+    }
+
+    .messages-containers {
+        padding: 5px;
+    }
+    .messages-containers-header {
+        flex-direction: column;
+        gap: 8px;
+        padding: 5px;
+    }
+    .messages-containers-header h3 {
+        font-size: 20px;
+    }
+    .messages-search-container {
+        max-width: 350px;
+        width: 100%; 
+    }
+    .chatContainer {
+        width: 100%;
+        gap: 20px;
+        padding: 5px;
+    }
+    .chatNameEmail {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        line-height: 1.9;
+        
+        align-items: start;
+        word-break: break-all;
+        flex-direction: column;
+    }
+    .chatNameEmail .status-time-date {
+        width: 100%;
+        display: flex;
+        align-items: flex-end;
+        justify-content: flex-end;
+        flex-direction: column;
+    }
+    .chatNameEmail p:nth-child(1) {
+        font: 600 18px 'mulish';
+        text-align: left;
+    }
+    .chatNameEmail p:nth-child(2) a {
+        font-size: 15px;
+        font-weight: 600;
+    }
+    .chatIndex {
+        border-right: none;
+    }
+
+
+
+    .close-all-message {
+        right: 0;
+        top: 5px;
+        background: red;
+        /* padding: 5px; */
+        width: 40px;
+    }
+    .all-messages-container {
+        width: 98%;
+    }
+    .header-all-message {
+        flex-direction: column;
+        justify-content: center;
+        gap: 10px;
+    }
+    .header-all-message h2 {
+        font-size: 20px;
+        margin-left: 0px;
+    }
+    .header-all-message .search-input {
+        width: 90%;
+    }
+    .header-all-message .all-read-notread {
+        text-align: center;
+        margin-right: 0;
+        justify-content: center;
+    }
+    .show-all-meassage-section {
+        height: 75%;
+    }
+
+    .message-details-container {
+        width:90%;
+    }
+
+
+
+    .email-subcriber-container {
+        width: 95%;
+        height: 100%;
+    }
+    .email-subcriber-header {
+        gap: 8px;
+        flex-direction: column;
+    }
+    .email-subcriber-header .subcriber-search-input {
+        max-width: 400px;
+        width: 100%;
+    }
+    .close-all-mails {
+        right: 10px;
+        top: 10px;
+        background: red;
+    }
+}

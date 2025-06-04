@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Real-Estate</title>
+    <link rel="stylesheet" href="index.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="logo-container headerDropAmination">
+            <a href="index.html"><h1>LOGO</h1></a>
+        </div>
+        
+        <div class="nav-btn headerDropAmination">
+            <img src="./assest/close-nav.png" width="50" alt="close navigation menu" class="close-nav">
+            <div class="logo-container">
+                <a href="index.html"><h1>LOGO</h1></a>
+            </div>
+            <nav>
+                <ul>
+                    <li><a class="active-link nav-link"  href="#heroSection">Home</a></li>
+                    <li><a class="nav-link" href="#about">About Us</a></li>
+                    <li><a class="nav-link" href="#services">Services</a></li>
+                    <li><a class="nav-link" href="properties.html">Properties</a></li>
+                    <li><a class="nav-link" href="blog.html">Blogs</a></li>
+                    <li><a class="nav-link" href="contact.php   ">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="other-header-item">
+                <button class="header-getstarted-btn">Get started &#8594;</button>
+                <button onclick="window.location.href='./admin-folder/admin-auth.php'" class="header-admin-btn">Admin &#8594;</button>
+            </div>
+        </div>
+        <img src="./assest/open-nav.png" width="40px" alt="" class="open-nav headerDropAmination">
+    </header>
+
+    <main>
+        <section class="hero-section" id="heroSection">
+            <div class="hero-section-container">
+                <div class="hero-item">
+                    <h1 class="WelcomeAnimation">Welcome to <strong>AL-HUDUH</strong> estate</h1>
+                    <div class="hero-para-container WelcomeAnimation">
+                        <p>Here you live your life to the fullest, Your happiness is our joy</p>
+                    </div>
+                    <div class="hero-search-container WelcomeAnimation">
+                        <div class="hero-search-input">
+                            <input type="search" placeholder="Search any type of house">
+                        </div>
+                        <div class="hero-search-btn-container">
+                            <button class="hero-search-btn">Search <i class='bx bx-search'></i></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="about-section" id="about">
+            <div class="about-container">
+                <h1 class="about-head-text">About</h1>
+                <div class="about-item">
+                    <div class="about-left-section leftSectionAnimation">
+                        <div class="about-header">
+                            <h2 class="leftSectionAnimation">About Us</h2>
+                        </div>
+                        <div class="images-container">
+                            <img src="./assest/image5.jpg" alt="">
+                        </div>
+                    </div>
+                    <div class="about-text-container rightSectionAnimation">
+                        <div class="inner-about-us-text">
+                           <h3>We build Confort and Peace in the home!</h3>
+                           <div class="about-text ">
+                            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Officia vero tempora explicabo fugit, porro ullam ea ut officiis iusto, repellat tenetur quam quas et, aliquid rem. Quia nostrum veniam consectetur, reiciendis fugit minima omnis incidunt hic velit cumque ipsa quasi soluta harum nam ex animi aliquid numquam vitae molestiae nobis!</p>
+                            <button>Read More &#8594;</button>
+                           </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="first-banner">
+            <div class="first-banner-container">
+                <div class="first-banner-item bannerAnimation">
+                    <div class="banner-properties">
+                        <p>60+</p>
+                        <p>Properties</p>
+                    </div>
+                    <div class="avaliable-properties bannerAnimation">
+                        <p>20+</p>
+                        <p>Avaliable Properties</p>
+                    </div>
+                    <div class="satified-client bannerAnimation">
+                        <p>40+</p>
+                        <p>Satified Client</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="recent-properties">
+            <div class="properties-header propertiesAnimationHeader">
+                <h1>Recent Apartment Listings</h1>
+                <a href="">Explore All &#8594;</a>
+            </div>
+            <div class="recent-properties-container">
+                <div class="properties-list">
+                    <!-- propertise are listed here -->
+                </div>
+            </div>
+        </section>
+        
+        <div class="showlistingDetails">
+            <div class="showlistingDetailsContainer">
+                <div class="detailsHead">
+                    <h3>Lisiting Details</h3>
+                    <img src="/real-estate-website/assest/close.png" onclick="hideDatailsBanners()" class="closeSection" width="50" alt="">
+                </div>
+                <div class="showListing-Details-Container">
+                    <div class="datils-text-container">
+                        <!-- All item will be displayed -->
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <section class="services-section" id="services">
+            <div class="services-header">
+                <h1>Our Servicse</h1>
+                <!-- <p>AL-HUDAH is a company that provide services such as</p> -->
+            </div>
+            <div class="services-container">
+                <div class="sevices-item serviceSectionAnimation">
+                    <div class="services-image-container">
+                        <img src="./assest/image1.jpg" alt="">
+                    </div>
+                    <div class="services-details">
+                        <h3>Rent House</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi vitae perspiciatis omnis expedita recusandae alias.</p>
+                    </div>
+                </div>
+                <hr>
+                <div class="sevices-item serviceSectionAnimation">
+                    <div class="services-image-container">
+                        <img src="./assest/image1.jpg" alt="">
+                    </div>
+                    <div class="services-details">
+                        <h3>Buy House</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi vitae perspiciatis omnis expedita recusandae alias.</p>
+                    </div>
+                </div>
+                <hr>
+                <div class="sevices-item serviceSectionAnimation">
+                    <div class="services-image-container">
+                        <img src="./assest/image1.jpg" alt="">
+                    </div>
+                    <div class="services-details">
+                        <h3>Sell House</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi vitae perspiciatis omnis expedita recusandae alias.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="testimonial-section">
+            <h2>What Our Clients Are Saying</h2>
+            <div class="testimonial-slider">
+              <div class="testimonial-card" id="testimonialCard">
+                    <div class="testimonial-img">
+                        <img id="testimonialImg" src="" alt="Client Photo">
+                    </div>
+                    <div class="testimonial-content">
+                        <h3 id="clientName">
+                            <!-- client Name -->
+                        </h3>
+                        <p class="position" id="clientposition">
+                            <!-- client position -->
+                        </p>
+                        <div class="stars">
+                            <!-- client star -->
+                        </div>
+                        <p class="testimonial-text" id="testimonialText">
+                            <!-- client text -->
+                        </p>
+                        <p class="signature" id="clientSignature">
+                            <!-- client signature -->
+                        </p>
+                    </div>
+                <div class="nav-arrows">
+                  <button onclick="changeSlide(-1)">&#8592;</button>
+                  <button onclick="changeSlide(1)">&#8594;</button>
+                </div>
+              </div>
+            </div>
+        </section>
+        
+        <section class="faqs">
+            <div class="faqs-container">
+                <div class="faqs-item">
+                    <div class="faq-left-section leftSectionAnimation">
+                        <h2>Frequently Asked Questions</h2>
+                        <p>Get an answer to a specific question. Can’t find your answer?</p>
+                        <button class="contact-btn">Contact Us</button>
+                        <span>We reply within 24 hours</span>
+                    </div>
+                    <div class="faq-right-section rightSectionAnimation">
+                        <details>
+                            <summary>What services do you offer?</summary>
+                            <div class="faq-answer">
+                                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Iure omnis est, exercitationem modi culpa reprehenderit laborum numquam facere quos voluptate sed animi consequatur in adipisci ut aliquid voluptates obcaecati consequuntur.</p>
+                            </div>
+                        </details>
+                        <details>
+                            <summary>How do I get started?</summary>
+                            <div class="faq-answer">
+                                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Iure omnis est, exercitationem modi culpa reprehenderit laborum numquam facere quos voluptate sed animi consequatur in adipisci ut aliquid voluptates obcaecati consequuntur.</p>
+                            </div>
+                        </details>
+                        <details>
+                            <summary>Can I get a refund?</summary>
+                            <div class="faq-answer">
+                                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Iure omnis est, exercitationem modi culpa reprehenderit laborum numquam facere quos voluptate sed animi consequatur in adipisci ut aliquid voluptates obcaecati consequuntur.</p>
+                            </div>
+                        </details>
+                        <details>
+                            <summary>How can I contact support?</summary>
+                            <div class="faq-answer">
+                                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Iure omnis est, exercitationem modi culpa reprehenderit laborum numquam facere quos voluptate sed animi consequatur in adipisci ut aliquid voluptates obcaecati consequuntur.</p>
+                            </div>
+                        </details>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="why-choose-us">
+            <h2>Why Choose AL-HUDUH Estate?</h2>
+            <div class="features-container">
+                <div class="feature bannerAnimation">
+                    <i class='bx bxs-home'></i>
+                    <h3>Quality Listings</h3>
+                    <p>We offer verified and quality listings only.</p>
+                </div>
+                <div class="feature bannerAnimation">
+                    <i class='bx bx-shield-alt-2'></i>
+                    <h3>Secure Deals</h3>
+                    <p>Every transaction is protected and transparent.</p>
+                </div>
+                <div class="feature bannerAnimation">
+                    <i class='bx bx-shield-alt-2'></i>
+                    <h3>Trusted Agents</h3>
+                    <p>Our trusted agent help in asseccing client in all purpose.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="blogs">
+            <h2>News & Updates</h2>
+            <div class="blog-container">
+                <div class="blog-list">
+                    <!-- ----latest blogs will be displayed here -->                
+                </div>
+                <div class="blog-button-container">
+                    <button onclick="window.location.href='blog.html'">Read All Blogs &#8594</button>
+                </div>
+            </div>
+        </section>
+        
+        <div class="blog-details-section">
+            <div class="blog-details-container">
+                <img src="/real-estate-website/assest/close.png" width="50" class="closeDetailBlogSection" onclick="closeDetailSection()" alt="">
+                <div class="blog-header-details">
+                    <h3>BLOG DETAILS</h3>
+                </div>
+
+                <div class="display-blog-details">
+                    <!-- blog-details wil be displayed here -->
+                </div>
+            </div>
+        </div>
+
+        <section class="newsletter-section">
+            <div class="newsletter-container newsletterAnimation">
+                <div>
+                    <h2>Stay Updated!</h2>
+                    <p>Subscribe to receive the latest property listings and news.</p>
+                </div>
+                <form action="/real-estate-website/admin-folder/pagesAndcontent.php" method="post">
+                    <input type="email" name="newsletterInput" placeholder="Enter your email">
+                    <br>
+                    <div class="button-container">
+                        <button name="newsletterBtn">Subscribe</button>
+                    </div>
+                </form>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <div class="footer-container">
+            <div class="footer-section first-footer-section footerSectionAnimantion">
+                <h1>LOGO</h1>
+                <p>Helping you find your <br> perfect property, every step <br>of the way</p>
+
+                <ul class="social-icon">
+                    <li><a href=""><i class="bx bxl-instagram"></i></a></li>
+                    <li><a href=""><i class="bx bxl-facebook"></i></a></li>
+                    <li><a href=""><i class="bx bxl-linkedin"></i></a></li>
+                    <li><a href=""><i class="bx bxl-twitter"></i></a></li>
+                </ul>
+            </div>
+            <div class="footer-section footerSectionAnimantion">
+                <h2>Legal</h2>
+                <ul>
+                    <li><a href="">About Us</a></li>
+                    <li><a href="">Privacy Policy</a></li>
+                    <li><a href="">Terms & Conditions</a></li>
+                    <li><a href="">Agents Profile</a></li>
+                </ul>
+            </div>
+            <div class="footer-section footerSectionAnimantion">
+                <h2>Resources</h2>
+                <ul>
+                    <li><a href="">Buying Guide</a></li>
+                    <li><a href="">Selling Guide</a></li>
+                    <li><a href="">Renting Guilde</a></li>
+                </ul>
+            </div>
+            <div class="footer-section footerSectionAnimantion">
+                <h2>Quick Link</h2>
+                <ul>
+                    <li><a href="">Properties</a></li>
+                    <li><a href="">Blogs</a></li>
+                    <li><a href="">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-section footerSectionAnimantion">
+                <h2>Get in touch</h2>
+                <ul>
+                    <li>Phone: <a href="tel:">+234 811 1344 1673</a></li>
+                    <li>Email: <a href="mailto:">comapny@alhuda.com</a></li>
+                    <li>Address: 121 Main road, <br>Osogbo, Osun State</li>
+                </ul>
+            </div>
+        </div>
+        <hr>
+        <p class="copyrightAnimation">&copy; <span class="copyright-year"></span> AL-HUDAH - All Right Reserved</p>
+    </footer>
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <script src="scrollanimation.js"></script>
+    <script src="index.js"></script>
+</body>
+</html>

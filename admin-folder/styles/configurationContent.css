@@ -1,0 +1,438 @@
+@import url('https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200..1000;1,200..1000&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+section{
+    width: 100%;
+}
+
+
+.upload-image-container{
+    width: 100%;
+    height: 100vh;
+    background: #00000081;
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 999;
+    display: grid;
+    place-items: center;
+    display: none;
+}
+.upload-image-container.active{
+    display: block;
+}
+.inner-upload-image{
+    background: whitesmoke;
+    width: 40%;
+    height: 80%;
+    border-radius: 8px;
+    position: relative;
+}
+.close-banner{
+    position: absolute;
+    right: 0;
+    top: 0;
+    cursor: pointer;
+}
+.inner-upload-image h3{
+    font: 600 20px 'mulish';
+    text-align: center;
+    margin: 20px 0;
+}
+.preview-image-input{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    flex-direction: column;
+}
+.preview-image{
+    border: 5px solid #00000054;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    margin-top: 20px;
+}
+.preview-image img{
+    border-radius: 50%;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.picture-input-container{
+    width: 100%;
+    margin: 30px auto 0;
+    gap: 30px;
+}
+.picture-input-container form{
+    text-align: center;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.picture-input-container form label{
+    font: 500 18px 'mulish';
+}
+.picture-input-container form input[type = 'file']{
+    border: 1px solid #00000045;
+    padding: 10px 0 10px 10px;
+    border-radius: 6px;
+}
+.picture-input-container form input[type = 'submit']{
+    padding: 10px 20px;
+    cursor: pointer;
+    font: 500 16px 'mulish';
+    background: darkgreen;
+    color: whitesmoke;
+    border: none;
+    border-radius: 6px;
+}
+
+
+.admin-user-profile{
+    width: 30%;
+    margin-top: 10px;
+    padding: 10px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-color: #53cbec;
+    text-align: center;
+    position: fixed;
+    right: -1200px;
+    top: 65px;
+    transition: 0.3s ease-in-out;
+    /* color: white; */
+}
+.admin-user-profile.active{
+    right: 10px;
+}
+.admin-user-profile-container{
+    position: relative;
+    width: 100%;
+}
+.closeProfile{
+    position: absolute;
+    right: 0;
+    top: 0;
+    cursor: pointer;
+}
+.admin-image-name-email{
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.admin-image-name-email .admin-image{
+    width: 100px;
+    height: 100px;
+}
+.admin-image-name-email .admin-image img{
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+}
+.admin-image-name-email .admin-name-email{
+    line-height: 1.9;
+}
+.admin-image-name-email .admin-name-email h3{
+    font: 600 18px 'mulish';
+    text-transform: capitalize;
+}
+.admin-image-name-email .admin-name-email p{
+    font: 400 16px 'mulish';
+       text-transform: lowercase;
+}
+.admin-image-name-email .admin-name-email button{
+    font: 400 16px 'mulish';
+    background: #4a00e0;
+    color: whitesmoke;
+    border: none;
+    border-radius: 6px;
+    padding: 8px 15px;
+    margin: 10px 0;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+}
+.admin-image-name-email .admin-name-email button:hover{
+    box-shadow: 0 0 10px #0000009d;
+}
+.admin-gender p, .admin-postion p, .admin-address p{
+    font: 400 1rem 'mulish';
+    text-transform: capitalize;
+    margin-top: 8px;
+}
+
+.header-title{
+    width: 100%;
+    margin-top: 30px;
+}
+
+.header-title .logo h2{
+    font: 700 25px 'mulish';
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: #2f327d;
+}
+.header-title .logo p{
+    margin-top: 10px;
+    font: 500 18px 'mulish';
+}
+
+.add-admin-user-section{
+    background: whitesmoke;
+    width: 98%;
+    height: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.add-admin-user-container{
+    background: white;
+    width: 40%;
+    height: 350px;
+    padding: 10px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 40px;
+}
+.add-user-btn{
+    margin-top: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.add-user-btn button{
+    padding: 10px 20px;
+    font: 600 18px 'mulish';
+    color: white;
+    background: #0e57cc;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.add-user-section{
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 999;
+    background: #00000036;
+    display: none;
+}
+.add-user-section.active{
+    display: block;
+}
+.section-container{
+    width: 40%;
+    background: #ffffff;
+    padding: 10px;
+    margin: 0 auto;
+    max-height: 100vh;
+    /* overflow-y: auto; */
+    position: relative;
+}
+.closeAddUser{
+    position: absolute;
+    right: -50px;
+    background: white;
+    border-radius: 50%;
+    cursor: pointer;
+    /* z-index: 999; */
+}
+.logo-container{
+    width: 90%;
+    margin: 20px auto 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.logo-container div{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+.logo-container div img{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+.logo-container h1{
+    font: 700 2rem 'mulish';
+    letter-spacing: 5px;
+}
+.logo-container a{
+    text-decoration: none;
+    font: 600 20px 'mulish';
+}
+.title-text{
+    width: 90%;
+    margin: 20px auto 10px;
+    display: flex;
+    align-items: start;
+    justify-content: start;
+    gap: 10px;
+    flex-direction: column;
+}
+.title-text h3{
+    font: 800 25px 'mulish';
+    letter-spacing: 1px;
+    color: #0e57cc;
+}
+.title-text p{
+    font: 600 20px 'mulish';
+    font-style: oblique;
+    letter-spacing: 1px;
+}
+form{
+    width: 90%;
+    margin: 20px auto;
+    max-height: 85vh;
+    overflow-y: auto;
+}
+form label{
+    font: 600 20px 'mulish';
+}
+form input::placeholder{
+    font-size: 18px;
+    color: #767676;
+}
+
+form p{
+    margin-bottom: 20px;
+    color: #767676;
+    font: 500 18px 'mulish';
+}
+
+form div{
+    border-bottom: 1px solid #767676;
+    margin-bottom: 20px;
+}
+form div label{
+    font: 500 18px 'mulish';
+    text-transform: capitalize;
+
+}
+form div input{
+    width: 100%;
+    height: 40px;
+    border: none;
+    outline: none;
+    font: 600 18px 'mulish';
+    text-transform: capitalize;
+    padding: 0 8px;
+}
+form div input[type = email]{
+    text-transform: lowercase;
+}
+form div input::placeholder{
+    font-size: 16px;
+}
+
+form div input[type = submit]{
+    width: 100%;
+    height: 40px;
+    border-radius: 20px;
+    background: #9898ff;
+    color: white;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+form div input[type = submit]:hover{
+    background: blue;
+}
+form div:last-child{
+    border-bottom: 0;
+}
+form div input:focus{
+    border: 1px solid #9898ff;
+}
+
+
+
+
+
+
+
+
+
+@media screen and (max-width: 767px){   
+
+    .admin-user-profile{
+        width: 95%;
+        padding: 10px;
+        background: #bee7f3;
+    }
+    .logo{
+        margin-left: 0;
+    }
+    .logo h2{
+        font-size: 20px;
+        text-align: center;
+    }
+    .logo p{
+        text-align: center;
+        font-size: 17px;
+    }
+    .add-admin-user-container {
+        max-width: 300px;
+        width: 100%;
+    }
+    .section-container {
+        width: 100%;
+    }
+    .closeAddUser {
+        right: 0;
+    }
+    form div input::placeholder {
+        font-size: 12px;
+    }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+     .admin-user-profile{
+        width: 60%;
+        padding: 10px;
+        background: #bee7f3;
+    }   
+
+     .logo{
+        margin-left: 0;
+    }
+    .logo h2{
+        font-size: 20px;
+        text-align: center;
+    }
+    .logo p{
+        text-align: center;
+        font-size: 17px;
+    }
+    .add-admin-user-container {
+        max-width: 400px;
+        width: 100%;
+    }
+    .section-container {
+        width: 100%;
+    }
+    .closeAddUser {
+        right: 0;
+    }
+    form div input::placeholder {
+        font-size: 12px;
+    }
+}   

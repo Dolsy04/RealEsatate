@@ -1,0 +1,1061 @@
+@import url('https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200..1000;1,200..1000&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+section{
+    width: 100%;
+}
+
+.response-container-section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #c5c6c7;
+    border: 1px solid #8d9397;
+    padding: 10px 15px;
+    border-radius: 5px;
+    margin: 10px auto 20px;
+    max-width: 600px;
+    position: relative;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    transition: opacity 0.3s ease;
+}
+
+.response-container {
+    flex: 1;
+    position: relative;
+}
+
+.response {
+    margin: 0;
+    font: 800 18px 'mulish';
+    color: #bd0202;
+    letter-spacing: 1px;
+}
+
+.close-response {
+    cursor: pointer;
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    right: 7px;
+    z-index: 999;
+}
+
+.upload-image-container{
+    width: 100%;
+    height: 100vh;
+    background: #00000081;
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 999;
+    display: grid;
+    place-items: center;
+    display: none;
+}
+.upload-image-container.active{
+    display: block;
+}
+.inner-upload-image{
+    background: whitesmoke;
+    width: 40%;
+    height: 80%;
+    border-radius: 8px;
+    position: relative;
+}
+.close-banner{
+    position: absolute;
+    right: 0;
+    top: 0;
+    cursor: pointer;
+}
+.inner-upload-image h3{
+    font: 600 20px 'mulish';
+    text-align: center;
+    margin: 20px 0;
+}
+.preview-image-input{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    flex-direction: column;
+}
+.preview-image{
+    border: 5px solid #00000054;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    margin-top: 20px;
+}
+.preview-image img{
+    border-radius: 50%;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.picture-input-container{
+    width: 100%;
+    margin: 30px auto 0;
+    gap: 30px;
+}
+.picture-input-container form{
+    text-align: center;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.picture-input-container form label{
+    font: 500 18px 'mulish';
+}
+.picture-input-container form input[type = 'file']{
+    border: 1px solid #00000045;
+    padding: 10px 0 10px 10px;
+    border-radius: 6px;
+}
+.picture-input-container form input[type = 'submit']{
+    padding: 10px 20px;
+    cursor: pointer;
+    font: 500 16px 'mulish';
+    background: darkgreen;
+    color: whitesmoke;
+    border: none;
+    border-radius: 6px;
+}
+
+
+.admin-user-profile{
+    width: 30%;
+    margin-top: 10px;
+    padding: 10px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-color: #53cbec;
+    text-align: center;
+    position: fixed;
+    right: -1200px;
+    top: 65px;
+    transition: 0.3s ease-in-out;
+    /* color: white; */
+}
+.admin-user-profile.active{
+    right: 10px;
+}
+.admin-user-profile-container{
+    position: relative;
+    width: 100%;
+}
+.closeProfile{
+    position: absolute;
+    right: 0;
+    top: 0;
+    cursor: pointer;
+}
+.admin-image-name-email{
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.admin-image-name-email .admin-image{
+    width: 100px;
+    height: 100px;
+}
+.admin-image-name-email .admin-image img{
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+}
+.admin-image-name-email .admin-name-email{
+    line-height: 1.9;
+}
+.admin-image-name-email .admin-name-email h3{
+    font: 600 18px 'mulish';
+    text-transform: capitalize;
+}
+.admin-image-name-email .admin-name-email p{
+    font: 400 16px 'mulish';
+       text-transform: lowercase;
+}
+.admin-image-name-email .admin-name-email button{
+    font: 400 16px 'mulish';
+    background: #4a00e0;
+    color: whitesmoke;
+    border: none;
+    border-radius: 6px;
+    padding: 8px 15px;
+    margin: 10px 0;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+}
+.admin-image-name-email .admin-name-email button:hover{
+    box-shadow: 0 0 10px #0000009d;
+}
+.admin-gender p, .admin-postion p, .admin-address p{
+    font: 400 1rem 'mulish';
+    text-transform: capitalize;
+    margin-top: 8px;
+}
+
+
+.listing-header-container{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 20px 0;
+}
+.listing-header h2{
+    font: 600 30px 'mulish';
+    letter-spacing: 1px;
+    color: midnightblue;
+}
+.listing-header p{
+    font: 500 18px 'mulish';
+    margin-top: 10px;
+}
+
+.input-search-container{
+    margin-right: 20px;
+    border: 2px solid #4a00e0;
+    width: 40%;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 20px;
+}
+.input-search-container input{
+    width: 70%;
+    height: 100%;
+    border: none;
+    outline: none;
+    padding: 0 8px;
+    font: 500 16px 'mulish';
+    border-radius: 20px;
+}
+.input-search-container button{
+    width: 30%;
+    height: 100%;
+    border-radius: 20px;
+    background: #4a00e0;
+    color: whitesmoke;
+    border: none;
+    outline: none;
+    font: 500 15px 'mulish';
+    cursor: pointer;
+}
+
+.addlisting-form{
+    width: 99%;
+    margin: 40px auto 20px;
+    background: whitesmoke;
+    border-radius: 20px;
+    box-shadow:  0 0 10px #80808097;
+}
+.adlisting-header{
+    width: 85%;
+    margin: 0 auto;
+}
+.adlisting-header h3{
+    padding: 20px 0 20px 20px;
+    font: 700 25px 'mulish';
+    color: #4a00e0;
+    letter-spacing: 1px;
+    text-align: center;
+}
+form{
+    width: 100%;
+    padding: 20px;
+}
+.form-container{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.form-container div{
+    display: flex;
+    align-items: start;
+    flex-direction: column;
+    /* border: 1px solid black; */
+    width: 40%;
+    height: auto;
+}
+
+.form-container div label{
+    font: 500 17px 'mulish';
+    letter-spacing: 1px;
+    margin-left: 5px;
+}
+.form-container div input[type = file]{
+    width: 100%;
+    height: 40px;
+    margin-top: 8px;
+    border: 1px solid black;
+    outline: none;
+    border-radius: 6px;
+    padding: 8px;
+    font: 500 18px 'mulish';
+}
+.form-container div:nth-child(2){
+    width: 30%;
+    height: 200px;
+    margin-bottom: 8px;
+}
+.form-container div:nth-child(2) .image-preview{
+    border: 1px solid black;
+    width: 100%;
+    height: 100%;
+    margin-top: 8px;
+    padding: 2px;
+}
+.form-container div:nth-child(2) .image-preview img{
+    width: 100%;
+    height: 100%;
+    object-fit:cover;
+}
+.form-container div input{
+    width: 100%;
+    height: 40px;
+    margin-top: 8px;
+    border: 1px solid black;
+    outline: none;
+    border-radius: 6px;
+    padding: 0 8px;
+    font: 500 18px 'mulish';
+}
+.form-container div input:focus, .form-container div textarea:focus{
+    border: 2px solid #4a00e0;
+}
+.form-container div:nth-child(9){
+    height: auto;
+    /* width: 85%; */
+}
+
+.form-container div textarea{
+    width: 100%;
+    height: auto;
+    margin-top: 8px;
+    border: 1px solid black;
+    outline: none;
+    border-radius: 6px;
+    padding: 8px;
+    font: 500 18px 'mulish';
+    resize: vertical;
+}
+.button-container input{
+    background: #4a00e0;
+    color: whitesmoke;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+}
+.button-container input:hover{
+    background: midnightblue;
+}
+
+
+/* =-------------SHOW LISTING STYlEs ------------------ */
+
+.showListing-container{
+    width: 99%;
+    /* height: 100vh; */
+    margin: 40px auto 20px;
+    padding-bottom: 20px;
+    background: whitesmoke;
+    border-radius: 20px;
+    box-shadow:  0 0 10px #80808097;
+}
+.showListing-container h2{
+    padding: 20px 0 20px 20px;
+    font: 700 25px 'mulish';
+    color: #4a00e0;
+    letter-spacing: 1px;
+    text-align: center;
+}
+
+.showlisting-item{
+    width: 100%;
+    height: 100%;
+     display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    padding: 20px;
+}
+
+.listingItemContainer {
+    flex: 0 1 300px;
+    display: flex;
+    justify-content: center;
+}
+
+.listingList {
+    background-color: #fff;
+    width: 100%;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.listingList:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+}
+.listingImage{
+    width: 100%;
+    height: 200px;
+}
+.listingImage img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.listingList h3 {
+    font-size: 1.3em;
+    margin: 10px 0 5px;
+    color: #222767;
+}
+
+.listingList p {
+    margin: 3px 0;
+    font-size: 0.95em;
+    color: #555;
+}
+.lisistingLocation{
+    word-wrap: break-word;
+    width: 80%;
+}
+.card-buttons {
+    margin-top: 12px;
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.card-buttons button {
+    padding: 6px 14px;
+    border: none;
+    border-radius: 6px;
+    background-color: #007bff;
+    color: white;
+    cursor: pointer;
+    font-size: 0.9em;
+    transition: background-color 0.3s ease;
+}
+.card-buttons button:nth-child(2){
+    background: green;
+}
+.card-buttons button:nth-child(3){
+    background: red;
+}
+.card-buttons button:hover {
+    background-color: #0056b3;
+}
+.card-buttons button:nth-child(2):hover{
+    background: darkgreen;
+}
+.card-buttons button:nth-child(3):hover{
+    background: darkred;
+}
+
+
+.viewall-container{
+    width: 30%;
+    margin: 20px auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.viewall-container button{
+    font: 500 17px 'mulish';
+    padding: 10px 15px;
+    border: none;
+    border-radius: 6px;
+    background: green;
+    color: white;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.279);
+    cursor: pointer;
+    transition: 0.2s ease-in-out;
+}
+.viewall-container button:hover{
+    background: darkgreen;
+}
+/* -------------AVAlIABLE LISTING STYLES---------- */
+
+.showlistingDetails{
+    width: 100%;
+    height: 100vh;
+    background: #000000c9;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 999;
+    display: none;
+}
+.showlistingDetails.active{
+    display: block;
+}
+.showlistingDetailsContainer, .alllistingContainer{
+    width: 80%;
+    margin: 0 auto;
+    background: whitesmoke;
+}
+.detailsHead, .alllistingHead{
+    width: 100%;
+    padding: 10px;
+    position: relative;
+    background: white;
+}
+.detailsHead h3, .alllistingHead h3{
+    text-align: center;
+    font: 600 25px 'mulish';
+    letter-spacing: 1px;
+    color: blue;
+}
+
+.detailsHead img, .alllistingHead img{
+    position: absolute;
+    top: 0;
+    right: 0;
+    cursor: pointer;
+}
+
+.showListing-Details-Container, .allisting-Container{
+    width: 100%;
+    height: 90vh;
+    padding: 20px;
+    overflow: hidden;
+}
+.datils-text-container, .all-lisiting-container{
+    height: 100%;
+    overflow-y: auto;
+    width: 100%;
+    padding-bottom: 20px;
+}
+.flex-details-container{
+    width: 100%;
+    height: 99%;
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+}
+.right-details-container{
+    width: 45%;
+    height: 99vh;
+}
+.right-details-container img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.left-details-container{
+    width: 60%;
+}
+.left-details-container h3{
+    font: 600 30px 'mulish';
+    color: #4a00e0;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    padding-bottom: 20px;
+}
+.details-listing-details{
+    display: flex;
+    gap: 15px;
+    align-items: center;
+    font-size: 1.3em;
+    color: #555;
+}
+.details-listing-details p{
+    font: 500 16px 'mulish';
+    color: #555;
+}
+.details-loaction-container{
+    margin-bottom: 20px;
+}
+.details-loaction-container p{
+    font: 500 16px 'mulish';
+    color: #555;
+}
+.details-details-container{
+    margin: 20px 0;
+}
+.details-details-container p{
+    font: 500 16px 'mulish';
+    line-height: 1.7;
+}
+.details-buttons{
+    margin-top: 20px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+.details-buttons button{
+    padding: 10px 20px;
+    font: 500 16px 'mulish';
+    border: none;
+    border-radius: 6px;
+    color: white;
+    cursor: pointer;
+    transition: 0.2s ease-in-out;
+}
+.details-buttons button:nth-child(1){
+    background: green;
+}
+.details-buttons button:nth-child(2){
+    background: red;
+}
+.details-buttons button:nth-child(3){
+    background: #d30909;
+}
+.details-buttons button:nth-child(1):hover{
+    background: darkgreen;
+}
+.details-buttons button:nth-child(2):hover{
+    background: darkred;
+}
+.details-buttons button:nth-child(3):hover{
+    background: #bd0202;
+}
+
+/* ------------------ALL LISITING STYLE------------ */
+
+.all-listing-section{
+    width: 100%;
+    height: 100vh;
+    background: #000000b7;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 999;
+    display: none;
+}
+.all-listing-section.active{
+    display: block;
+}
+.alllistingContainer{
+    width: 90%;
+}
+.all-lisiting-container{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: center;
+}
+
+.all-lisitng-search-container{
+    /* border: 1px solid black; */
+    width: 70%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-left: 20px;
+}
+
+.all-lisitng-search{
+    border: 2px solid #4a00e0;
+    width: 70%;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 20px;
+}
+.all-lisitng-search input{
+    width: 70%;
+    height: 100%;
+    border: none;
+    outline: none;
+    padding: 0 8px;
+    font: 500 16px 'mulish';
+    border-radius: 20px;
+}
+.all-lisitng-search button{
+    width: 30%;
+    height: 100%;
+    border-radius: 20px;
+    background: #4a00e0;
+    color: whitesmoke;
+    border: none;
+    outline: none;
+    font: 500 15px 'mulish';
+    cursor: pointer;
+}
+
+
+/* ---------------updating styling------------- */
+
+.editLisiting-form {
+    background: #000000b7;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 999;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    display: none;
+}
+.editLisiting-form.active{
+    display: block;
+}
+
+.editingLisiting-container {
+    background: whitesmoke;
+    width: 90%;
+    max-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+}
+
+.edit-header {
+    width: 100%;
+    position: relative;
+    background: white;
+    flex-shrink: 0;
+}
+
+.closeEditingSection {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+}
+.editingLisiting-container form {
+    flex: 1;
+    overflow-y: auto;
+    padding: 20px;
+}
+.editing-form-container div:nth-child(3){
+    width: 30%;
+    height: 200px;
+    margin-bottom: 8px;
+}
+
+.editing-form-container div:nth-child(3) .new-image-preview{
+    border: 1px solid black;
+    width: 100%;
+    height: 100%;
+    margin-top: 8px;
+    padding: 2px;
+}
+.editing-form-container div:nth-child(3) .new-image-preview img{
+    width: 100%;
+    height: 100%;
+    object-fit:cover;
+}
+
+
+/* ------deleteing style--------- */
+
+.deleteListing-section{
+    background: #d4d3d3;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 999;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    display: none;
+}
+.deleteListing-section.active{
+    display: flex;
+}
+.delete-container{
+    background: whitesmoke;
+    width: 40%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.delete-container h3{
+    color: red;
+    font: 500 20px 'mulish';
+    text-align: center;
+    margin-bottom: 20px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+
+.delete-container p{
+    text-align: center;
+    font: 700 20px 'mulish';
+    letter-spacing: 1px;
+    margin-bottom: 20px;
+}
+.cancel-delete-btn{
+    /* border: 1px solid black; */
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 20px;
+
+}
+.cancel-delete-btn button{
+    padding: 10px 20px;
+    border: none;
+    border-radius: 6px;
+    font: 500 17px 'mulish';
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+}
+.cancel-delete-btn button:nth-child(1){
+    background: red;
+    color: white;
+}
+.cancel-delete-btn button:nth-child(2){
+    background: white;
+    color: black;
+}
+.cancel-delete-btn button:nth-child(1):hover{
+    transform: scaleX(1.1);
+    box-shadow: 0 0 8px rgb(79, 78, 78);
+}
+.cancel-delete-btn button:nth-child(2):hover{
+    transform: scaleX(1.1);
+    box-shadow: 0 0 8px rgb(79, 78, 78);
+    background: gray;
+    color: white;
+}
+
+
+
+
+
+
+
+@media screen and (max-width: 767px){   
+
+    .admin-user-profile{
+        width: 95%;
+        padding: 10px;
+        background: #bee7f3;
+    }   
+
+  
+    .listing-header-container {
+        justify-content: center;
+        flex-direction: column;
+        gap: 20px;
+    }
+    .listing-header {
+        width: 100%;
+    }
+    .listing-header h2{
+        font-size: 25px;
+    }
+    .listing-header h2, .listing-header p {
+        text-align: center;
+    }
+    .input-search-container {
+        width: 80%;
+        margin-right: 0;
+    }
+    .addlisting-form {
+        border-radius: 0px;
+    }
+    .form-container {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        gap: 30px;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+    .form-container div {
+        width: 100%;
+        height: auto;
+        max-width: 300px;
+    }
+    .form-container div:nth-child(2) {
+        width: 100%;
+        max-width: 300px;
+        height: 200px;
+        margin-bottom: 8px;
+    }
+    .viewall-container {
+        width: 80%;
+    }
+
+    .showlistingDetailsContainer,.alllistingContainer  {
+        width: 100%;
+    }
+    .detailsHead h3, .alllistingHead h3, .adlisting-header h3 {
+        text-align: left;
+    }
+    .flex-details-container {
+        flex-wrap: wrap;
+    }
+    .right-details-container, .left-details-container {
+        width: 100%;
+    }
+    .details-listing-details {
+        gap: 8px;
+        flex-wrap: wrap;
+    }
+    .details-buttons {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+   .editingLisiting-container {
+        width: 100%;
+    }
+    .editing-form-container div:nth-child(3) {
+        max-width: 300px;
+        width: 100%;
+    }
+    .delete-container {
+        width: 100%;
+    }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+     .admin-user-profile{
+        width: 60%;
+        padding: 10px;
+        background: #bee7f3;
+    }   
+
+
+    .upper-section {
+        width: 100%;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .div-banner {
+        min-width: 250px;
+        width: 100%;
+    }
+    .middle-section {
+        border-radius: 0px;
+    }
+    .header-agent-section p {
+        font: 500 1rem 'mulish';
+    }
+    .header-agent-section {
+        width: 100%;
+        margin: 5px auto 10px;
+    }
+    .header-agent-section .header-btn {
+        flex-wrap: wrap;
+        justify-content: center;
+        margin-right: 0;
+        gap: 5px;
+    }
+    .header-agent-section .header-btn button {
+        padding: 5px 10px;
+        font: 500 1.0rem 'mulish';
+        background: midnightblue;
+        color: whitesmoke;
+        border: none;
+        border-radius: 8px;
+        cursor: pointer;
+        transition: 0.3s ease-in-out;
+    }
+    .agent-container {
+        overflow: auto;
+    }
+    .agent-container table {
+        table-layout: auto;
+        min-width: 600px;
+        overflow-x: scroll;
+    }
+    .agent-container th,
+    .agent-container td {
+        padding: 8px;
+    }
+
+
+    .listing-header-container {
+        justify-content: center;
+        flex-direction: column;
+        gap: 20px;
+    }
+    .listing-header {
+        width: 100%;
+    }
+    .listing-header h2, .listing-header p {
+        text-align: center;
+    }
+    .input-search-container {
+        width: 60%;
+        margin-right: 0;
+    }
+    .addlisting-form {
+        border-radius: 0px;
+    }
+
+
+    
+    .showlistingDetailsContainer,.alllistingContainer  {
+        width: 100%;
+    }
+    .detailsHead h3, .alllistingHead h3, .adlisting-header h3 {
+        text-align: left;
+    }
+    .flex-details-container {
+        flex-wrap: wrap;
+    }
+    .right-details-container, .left-details-container {
+        width: 100%;
+    }
+    .details-listing-details {
+        gap: 8px;
+        flex-wrap: wrap;
+    }
+    .details-buttons {
+        flex-wrap: wrap;
+        justify-content: start;
+    }
+
+   .editingLisiting-container {
+        width: 100%;
+    }
+    .editing-form-container div:nth-child(3) {
+        max-width: 300px;
+        width: 100%;
+    }
+    .delete-container {
+        width: 100%;
+    }
+}
