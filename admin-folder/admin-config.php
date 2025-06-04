@@ -1,5 +1,5 @@
 <?php 
-$host = "localhost";
+$host = "https://real-esatate-delta.vercel.app/";
 $user = "root";
 $pass = "";
 $database = "real_estate_website";
